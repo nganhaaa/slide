@@ -17,9 +17,31 @@
     :host { position: fixed; inset: 0; display: block; background: #000; color: #fff; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif; overflow: hidden; }
     .stage { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
     .canvas { position: relative; transform-origin: center center; flex-shrink: 0; background: #fff; will-change: transform; }
-    /* Slide transition: subtle fade + upward slide for livelier flow */
-    ::slotted(*) { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; box-sizing: border-box !important; overflow: hidden; opacity: 0; pointer-events: none; visibility: hidden; transform: translateY(18px) scale(0.996); transition: opacity 420ms ease, transform 420ms cubic-bezier(.2,.8,.2,1); }
-    ::slotted([data-deck-active]) { opacity: 1; pointer-events: auto; visibility: visible; transform: translateY(0) scale(1); }
+    /* Slide transition: dynamic 3D tilt + scale + slide + fade
+       - Incoming (active): fade in, translate to neutral, scale to 1, remove tilt
+       - Outgoing: tilt and move slightly upward while fading out
+    */
+    ::slotted(*) {
+      position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important;
+      box-sizing: border-box !important; overflow: hidden; opacity: 0; pointer-events: none; visibility: hidden;
+      transform: translateY(24px) scale(0.98) rotateX(2deg);
+      transform-origin: center center;
+      transition: opacity 520ms cubic-bezier(.2,.8,.2,1), transform 520ms cubic-bezier(.2,.8,.2,1), filter 420ms ease;
+      will-change: transform, opacity;
+      z-index: 10;
+    }
+    /* Active slide (incoming) */
+    ::slotted([data-deck-active]) {
+      opacity: 1; pointer-events: auto; visibility: visible;
+      transform: translateY(0) scale(1) rotateX(0deg);
+      z-index: 20;
+      box-shadow: 0 40px 100px rgba(2,6,23,0.35);
+    }
+    /* Ensure non-active slides animate out with a different pose */
+    ::slotted(:not([data-deck-active])) {
+      opacity: 0; pointer-events: none; visibility: hidden;
+      transform: translateY(-24px) scale(0.96) rotateX(-2deg);
+    }
     /* When printing, keep original behavior (no transitions) */
     .tapzones { position: fixed; inset: 0; display: flex; z-index: 2147482000; pointer-events: none; }
     .tapzone { flex: 1; pointer-events: auto; -webkit-tap-highlight-color: transparent; }
