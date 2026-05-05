@@ -337,6 +337,9 @@ section {
 .split-slide.ocean-split {
   background: var(--ocean-bg);
 }
+.split-slide.theory-split {
+  background: linear-gradient(135deg, var(--green-bg) 0%, rgba(14,80,112,0.08) 100%);
+}
 .split-slide .left-panel {
   position: absolute;
   left: 0; top: 72px; bottom: 0;
@@ -365,6 +368,7 @@ section {
 }
 .split-slide.green-split .section-tag { color: var(--green-mid); }
 .split-slide.ocean-split .section-tag { color: var(--ocean-mid); }
+.split-slide.theory-split .section-tag { color: #0288d1; }
 .split-slide h2 {
   font-size: 68px; font-weight: 900; line-height: 1.10;
   letter-spacing: -2px;
@@ -374,6 +378,7 @@ section {
 .split-slide h2 em { font-style: italic; }
 .split-slide.green-split h2 em { color: var(--green-mid); }
 .split-slide.ocean-split h2 em { color: var(--ocean-mid); }
+.split-slide.theory-split h2 em { color: #0288d1; }
 .split-slide .body-text {
   font-size: 28px; font-weight: 300; color: var(--text-mid);
   line-height: 1.6; margin-bottom: 32px;
@@ -391,6 +396,7 @@ section {
   display: flex; flex-direction: column; justify-content: center;
 }
 .dark-split.ocean-dark .dark-left { background: var(--ocean-dark); }
+.dark-split.theory-dark .dark-left { background: linear-gradient(135deg, #1b4965 0%, #2d6a35 100%); }
 .dark-split .dark-right {
   position: absolute;
   right: 0; top: 0; bottom: 0;
@@ -400,11 +406,13 @@ section {
   display: flex; flex-direction: column; justify-content: center;
 }
 .dark-split.ocean-dark .dark-right { background: var(--ocean-bg); }
+.dark-split.theory-dark .dark-right { background: linear-gradient(135deg, rgba(2,136,209,0.12) 0%, rgba(76,175,80,0.08) 100%); }
 .dark-split .dark-left .eyebrow {
   font-size: 24px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
   color: var(--green-light); margin-bottom: 24px;
 }
 .dark-split.ocean-dark .dark-left .eyebrow { color: var(--ocean-light); }
+.dark-split.theory-dark .dark-left .eyebrow { color: #81d4fa; }
 .dark-split .dark-left h2 {
   font-size: 64px; font-weight: 900; line-height: 1.10;
   letter-spacing: -2px; color: white; margin-bottom: 28px;
@@ -421,6 +429,7 @@ section {
   width: fit-content;
 }
 .dark-split.ocean-dark .dark-left .pill-btn { background: var(--ocean-bright); }
+.dark-split.theory-dark .dark-left .pill-btn { background: #0288d1; }
 
 /* ══════════════════════════════════════════════════
    CARDS GRID (for cause/effect)
@@ -436,6 +445,7 @@ section {
   position: relative;
 }
 .info-card.ocean { border-color: rgba(2,136,209,0.15); }
+.info-card.theory { border-color: rgba(2,136,209,0.12); }
 .info-card .card-num {
   position: absolute; top: -14px; left: 24px;
   width: 44px; height: 44px; border-radius: 50%;
@@ -444,6 +454,7 @@ section {
   display: flex; align-items: center; justify-content: center;
 }
 .info-card.ocean .card-num { background: var(--ocean-dark); }
+.info-card.theory .card-num { background: #1b4965; }
 .info-card .card-title {
   font-size: 26px; font-weight: 800; color: var(--text-dark);
   margin-bottom: 10px; margin-top: 4px;
@@ -457,6 +468,7 @@ section {
   color: var(--green-mid);
 }
 .info-card.ocean .arrow-link { color: var(--ocean-mid); }
+.info-card.theory .arrow-link { color: #0288d1; }
 
 /* Cause box 2-col */
 .cause-pair {
@@ -531,7 +543,7 @@ section {
   content: ''; position: absolute; inset: 0;
 }
 .divider-slide.forest-div .bg::after {
-  background: linear-gradient(110deg, rgba(10,40,15,0.88) 0%, rgba(10,40,15,0.65) 55%, rgba(0,0,0,0.15) 100%);
+  background: linear-gradient(110deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.28) 55%, rgba(0,0,0,0.05) 100%);
 }
 .divider-slide.ocean-div .bg::after {
   background: linear-gradient(110deg, rgba(5,20,50,0.90) 0%, rgba(5,20,50,0.65) 55%, rgba(0,0,0,0.15) 100%);
@@ -547,8 +559,12 @@ section {
   font-size: 28px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase;
   margin-bottom: 24px;
 }
+.divider-slide.theory-div .bg::after {
+  background: linear-gradient(110deg, rgba(2,70,100,0.65) 0%, rgba(20,60,90,0.50) 35%, rgba(70,30,80,0.35) 100%);
+}
 .divider-slide.forest-div .div-eyebrow { color: var(--green-light); }
 .divider-slide.ocean-div .div-eyebrow { color: var(--ocean-light); }
+.divider-slide.theory-div .div-eyebrow { color: #81d4fa; }
 .divider-slide .div-title {
   font-size: 120px; font-weight: 900; line-height: 1.10;
   color: white; letter-spacing: -4px; margin-bottom: 32px;
@@ -559,6 +575,7 @@ section {
 .divider-slide .div-stripe {
   position: absolute; bottom: 0; left: 0; right: 0; height: 8px;
 }
+.theory-div .div-stripe { background: linear-gradient(90deg, #0e5070, #4caf50, #81d4fa); }
 .forest-div .div-stripe { background: linear-gradient(90deg, #2d6a35, #4caf50, #a8e6a3); }
 .ocean-div .div-stripe { background: linear-gradient(90deg, #0e5070, #0288d1, #81d4fa); }
 
@@ -702,7 +719,7 @@ section {
 
 <!-- ══════════════════════════ SLIDE 1: COVER ══════════════════════════ -->
 <section data-screen-label="01 Trang bìa" class="cover-slide">
-  <div class="bg" style="background-image:url('images/01-cover-rung.jpg')"></div>
+  <div class="bg" style="background-image:url('images/canh.webp')"></div>
   <nav class="navbar dark-nav">
     <span class="brand">TRIẾT HỌC MÁC-LÊNIN</span>
     <div class="nav-links">
@@ -712,9 +729,9 @@ section {
     </div>
   </nav>
   <div class="cover-content">
-    <div class="eyebrow">Cặp phạm trù cơ bản</div>
-    <h1>NGUYÊN NHÂN<br>& KẾT QUẢ</h1>
-    <p class="cover-desc">Từ lý luận biện chứng đến thực tiễn bảo vệ tài nguyên thiên nhiên Việt Nam và thế giới</p>
+    <div class="eyebrow">Câu hỏi</div>
+    <h1 style="font-size:56px;line-height:1.35">Mối quan hệ giữa nguyên nhân và kết quả được vận dụng trong thực tiễn như thế nào?</h1>
+    <p class="cover-desc">Ứng dụng bảo vệ tài nguyên thiên nhiên</p>
     <div class="cover-tags">
       <span class="ctag">Lý luận triết học</span>
       <span class="ctag green">Tài nguyên Rừng</span>
@@ -770,9 +787,22 @@ section {
   </div>
 </section>
 
+<!-- ══════════════════════════ SLIDE 3: DIVIDER PHẦN I ══════════════════════════ -->
+<section data-screen-label="03 Phần I — Nền tảng lý luận" class="divider-slide theory-div">
+  <div class="bg" style="background-image:url('images/trung.jpg')"></div>
+  <div class="div-content">
+    <div class="div-eyebrow">Phần I — Nền tảng lý luận</div>
+    <div class="div-title">NGUYÊN NHÂN<br>&<br>KẾT QUẢ</div>
+    <p class="div-desc">Cặp phạm trù cốt lõi của triết học Mác-Lênin — từ khái niệm đến ứng dụng thực tiễn</p>
+  </div>
+  <div class="div-stripe"></div>
+</section>
+
 <!-- ══════════════════════════ SLIDE 3: KHÁI NIỆM ══════════════════════════ -->
-<section data-screen-label="03 Khái niệm" class="split-slide green-split">
-  <nav class="navbar green-nav">
+<section data-screen-label="04 Khái niệm" class="split-slide theory-split">
+  <div style="position: absolute; inset: 0; background-image: url('images/cay.jpg'); background-size: cover; background-position: center; transform: scaleX(-1); pointer-events: none;"></div>
+  <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.85) 45%, rgba(255,255,255,0.3) 100%); pointer-events: none;"></div>
+  <nav class="navbar green-nav" style="position: relative; z-index: 10;">
     <span class="brand">Mối quan hệ giữa nguyên nhân và kết quả được vận dụng trong thực tiễn như thế nào?</span>
     <div class="nav-links">
       <span class="nav-link active">GIỚI THIỆU</span>
@@ -780,7 +810,7 @@ section {
       <span class="nav-link">KẾT LUẬN</span>
     </div>
   </nav>
-  <div class="left-panel">
+  <div class="left-panel" style="position: relative; z-index: 5;">
     <div class="section-tag">Khái niệm cơ bản</div>
     <h2>Nguyên Nhân<br>& <em>Kết Quả</em></h2>
     <ul class="bullet-list" style="margin-bottom:28px">
@@ -792,13 +822,12 @@ section {
       <strong>Lưu ý:</strong> Không phải mọi sự nối tiếp về thời gian đều là quan hệ nhân quả — phải có <strong>mối liên hệ sinh ra</strong> nhau.
     </div>
   </div>
-  <div class="right-panel">
-    <img src="images/02-khai-niem.jpeg" alt="Thiên nhiên nhân quả" style="border-radius:24px;object-fit:cover;width:100%;height:100%">
+  <div class="right-panel" style="background: transparent;">
   </div>
 </section>
 
 <!-- ══════════════════════════ SLIDE 4: TÍNH CHẤT ══════════════════════════ -->
-<section data-screen-label="04 Tính chất" class="dark-split">
+<section data-screen-label="05 Tính chất" class="dark-split theory-dark">
   <div class="dark-left">
     <div class="eyebrow">Lý luận</div>
     <h2>3 Tính chất cốt lõi</h2>
@@ -806,26 +835,26 @@ section {
   </div>
   <div class="dark-right">
     <div class="cards-grid">
-      <div class="info-card" style="border-color:rgba(45,106,53,0.25)">
+      <div class="info-card theory" style="border-color:rgba(2,136,209,0.12)">
         <div class="card-num">01</div>
         <div class="card-title">Tính khách quan</div>
         <p class="card-body">Mối quan hệ nhân quả là liên hệ của chính bản thân thế giới, tác động độc lập với ý thức và ý muốn của con người — không thể phủ nhận hay tạo ra tùy ý.</p>
         <span class="arrow-link">Độc lập với ý muốn →</span>
       </div>
-      <div class="info-card">
+      <div class="info-card theory">
         <div class="card-num">02</div>
         <div class="card-title">Tính tất yếu</div>
         <p class="card-body">Đã có nguyên nhân ắt có kết quả — "nhân nào quả ấy". Tính tất yếu thể hiện khi: có nguyên nhân sẽ có hệ quả tương ứng.</p>
         <span class="arrow-link">Nhân nào quả ấy →</span>
       </div>
-      <div class="info-card">
+      <div class="info-card theory">
         <div class="card-num">03</div>
         <div class="card-title">Tính phổ biến</div>
         <p class="card-body">Mối quan hệ nhân quả diễn ra khắp mọi lĩnh vực của thế giới. Trong thế giới không có sự vật nào xuất hiện, phát triển, diệt vong mà lại không có nguyên nhân.</p>
         <span class="arrow-link">Khắp mọi lĩnh vực →</span>
       </div>
-      <div class="info-card" style="background:var(--green-pale)">
-        <div class="card-num" style="background:var(--green-mid)">→</div>
+      <div class="info-card theory" style="background:rgba(2,136,209,0.06)">
+        <div class="card-num" style="background:#1b4965">→</div>
         <div class="card-title">Ứng dụng</div>
         <p class="card-body">Phân loại đúng nguyên nhân → chủ yếu/thứ yếu, bên trong/bên ngoài → giải pháp đúng đắn.</p>
         <span class="arrow-link">Ý nghĩa phương pháp luận →</span>
@@ -835,7 +864,7 @@ section {
 </section>
 
 <!-- ══════════════════════════ SLIDE 5: BIỆN CHỨNG ══════════════════════════ -->
-<section data-screen-label="05 Quan hệ biện chứng" class="split-slide green-split">
+<section data-screen-label="06 Quan hệ biện chứng" class="split-slide theory-split">
   <nav class="navbar green-nav">
     <span class="brand">Mối quan hệ giữa nguyên nhân và kết quả được vận dụng trong thực tiễn như thế nào?</span>
     <div class="nav-links">
@@ -860,7 +889,7 @@ section {
 </section>
 
 <!-- ══════════════════════════ SLIDE 6: Ý NGHĨA ══════════════════════════ -->
-<section data-screen-label="06 Ý nghĩa phương pháp luận" class="dark-split">
+<section data-screen-label="07 Ý nghĩa phương pháp luận" class="dark-split theory-dark">
   <div class="dark-left">
     <div class="eyebrow">Phương pháp luận</div>
     <h2>Ý nghĩa thực tiễn</h2>
@@ -886,8 +915,8 @@ section {
 </section>
 
 <!-- ══════════════════════════ SLIDE 7: DIVIDER RỪNG ══════════════════════════ -->
-<section data-screen-label="07 Phần II — Tài nguyên Rừng" class="divider-slide forest-div">
-  <div class="bg" style="background-image:url('images/06-rung-divider.jpeg')"></div>
+<section data-screen-label="08 Phần II — Tài nguyên Rừng" class="divider-slide forest-div">
+  <div class="bg" style="background-image:url('images/rung.avif')"></div>
   <div class="div-content">
     <div class="div-eyebrow">Phần II — Ứng dụng thực tiễn</div>
     <div class="div-title">TÀI<br>NGUYÊN<br>RỪNG</div>
@@ -897,7 +926,7 @@ section {
 </section>
 
 <!-- ══════════════════════════ SLIDE 8: VAI TRÒ RỪNG ══════════════════════════ -->
-<section data-screen-label="08 Vai trò rừng" class="dark-split">
+<section data-screen-label="09 Vai trò rừng" class="dark-split">
   <div class="dark-left">
     <div class="eyebrow">Tài nguyên Rừng</div>
     <h2>Vai trò của Rừng</h2>
@@ -930,7 +959,7 @@ section {
 </section>
 
 <!-- ══════════════════════════ SLIDE 9: THỰC TRẠNG RỪNG ══════════════════════════ -->
-<section data-screen-label="09 Thực trạng rừng VN" class="table-slide">
+<section data-screen-label="10 Thực trạng rừng VN" class="table-slide">
   <nav class="navbar green-nav">
     <span class="brand">Mối quan hệ giữa nguyên nhân và kết quả được vận dụng trong thực tiễn như thế nào?</span>
     <div class="nav-links">
@@ -985,7 +1014,7 @@ section {
 </section>
 
 <!-- ══════════════════════════ SLIDE 10: LŨ LỤT — NGUYÊN NHÂN ══════════════════════════ -->
-<section data-screen-label="10 Lũ lụt Miền Trung — Nguyên nhân" class="split-slide green-split">
+<section data-screen-label="11 Lũ lụt Miền Trung — Nguyên nhân" class="split-slide green-split">
   <nav class="navbar green-nav">
     <span class="brand">Mối quan hệ giữa nguyên nhân và kết quả được vận dụng trong thực tiễn như thế nào?</span>
     <div class="nav-links">
@@ -995,9 +1024,9 @@ section {
     </div>
   </nav>
   <div class="left-panel" style="width:58%">
-    <div class="badge green">Ví dụ 1 — Rừng</div>
-    <h2 style="font-size:56px">Lũ lụt & Sạt lở<br><em>Miền Trung 2020</em><br><span style="color:var(--text-mid);font-size:44px;font-weight:700">Nguyên nhân</span></h2>
-    <div class="cause-pair" style="margin-top:16px">
+    <div class="badge green">Ví dụ 1</div>
+    <h2 style="font-size:56px; margin-bottom: 18px;">Vì sao có lũ lụt & sạt lở<br><em>Miền Trung 2020</em><br><span style="color:var(--text-mid);font-size:44px;font-weight:700">Nguyên nhân</span></h2>
+    <div class="cause-pair" style="margin-top:24px">
       <div class="cause-box-new obj">
         <div class="cb-label">Khách quan</div>
         <ul>
@@ -1021,7 +1050,7 @@ section {
 </section>
 
 <!-- ══════════════════════════ SLIDE 11: LŨ LỤT — HẬU QUẢ ══════════════════════════ -->
-<section data-screen-label="11 Lũ lụt Miền Trung — Hậu quả" class="split-slide green-split">
+<section data-screen-label="12 Lũ lụt Miền Trung — Hậu quả" class="split-slide green-split">
   <nav class="navbar green-nav">
     <span class="brand">Mối quan hệ giữa nguyên nhân và kết quả được vận dụng trong thực tiễn như thế nào?</span>
     <div class="nav-links">
@@ -1031,9 +1060,9 @@ section {
     </div>
   </nav>
   <div class="left-panel" style="width:60%">
-    <div class="badge green">Ví dụ 1 — Hậu quả</div>
-    <h2 style="font-size:56px;margin-bottom:24px"><em>Thảm họa</em><br>Miền Trung 2020</h2>
-    <div class="stats-row" style="grid-template-columns:repeat(3,1fr);margin-bottom:20px">
+    <div class="badge green">Hậu quả</div>
+    <h2 style="font-size:56px;margin-bottom:20px"><em>Thảm họa</em><br>Miền Trung 2020</h2>
+    <div class="stats-row" style="grid-template-columns:repeat(3,1fr);margin-bottom:24px">
       <div class="stat-card">
         <div class="stat-num">357</div>
         <div class="stat-label">Người chết & mất tích</div>
@@ -1057,7 +1086,7 @@ section {
 </section>
 
 <!-- ══════════════════════════ SLIDE 12: CHÁY RỪNG ÚC — NGUYÊN NHÂN ══════════════════════════ -->
-<section data-screen-label="12 Cháy rừng Úc — Nguyên nhân" class="split-slide green-split">
+<section data-screen-label="13 Cháy rừng Úc — Nguyên nhân" class="split-slide green-split">
   <nav class="navbar green-nav">
     <span class="brand">Mối quan hệ giữa nguyên nhân và kết quả được vận dụng trong thực tiễn như thế nào?</span>
     <div class="nav-links">
@@ -1067,9 +1096,9 @@ section {
     </div>
   </nav>
   <div class="left-panel" style="width:58%">
-    <div class="badge green">Ví dụ 2 — Rừng</div>
-    <h2 style="font-size:52px">Cháy rừng Úc<br><em>Black Summer</em><br><span style="color:var(--text-mid);font-size:40px;font-weight:700">2019–2020 · Nguyên nhân</span></h2>
-    <div class="cause-pair" style="margin-top:16px">
+    <div class="badge green">Ví dụ 2</div>
+    <h2 style="font-size:52px; margin-bottom: 18px;">Vì sao có cháy rừng ở Úc<br><em>Black Summer</em><br><span style="color:var(--text-mid);font-size:40px;font-weight:700">2019–2020 · Nguyên nhân</span></h2>
+    <div class="cause-pair" style="margin-top:24px">
       <div class="cause-box-new obj">
         <div class="cb-label">Khách quan</div>
         <ul>
@@ -1089,12 +1118,12 @@ section {
     </div>
   </div>
   <div class="right-panel" style="width:44%">
-    <img src="images/11-chayrung-nguyen-nhan.jpeg" alt="Cháy rừng đêm" style="border-radius:24px;width:100%;height:100%;object-fit:cover">
+    <img src="images/chay.gif" alt="Cháy rừng đêm" style="border-radius:24px;width:100%;height:100%;object-fit:cover">
   </div>
 </section>
 
 <!-- ══════════════════════════ SLIDE 13: CHÁY RỪNG ÚC — HẬU QUẢ ══════════════════════════ -->
-<section data-screen-label="13 Cháy rừng Úc — Hậu quả" class="split-slide green-split">
+<section data-screen-label="14 Cháy rừng Úc — Hậu quả" class="split-slide green-split">
   <nav class="navbar green-nav">
     <span class="brand">Mối quan hệ giữa nguyên nhân và kết quả được vận dụng trong thực tiễn như thế nào?</span>
     <div class="nav-links">
@@ -1104,9 +1133,9 @@ section {
     </div>
   </nav>
   <div class="left-panel" style="width:60%">
-    <div class="badge green">Ví dụ 2 — Hậu quả</div>
-    <h2 style="font-size:56px;margin-bottom:24px">Mùa hè <em>Đen</em><br>nước Úc</h2>
-    <div class="stats-row" style="grid-template-columns:repeat(3,1fr);margin-bottom:20px">
+    <div class="badge green">Hậu quả</div>
+    <h2 style="font-size:56px;margin-bottom:20px">Mùa hè <em>Đen</em><br>nước Úc</h2>
+    <div class="stats-row" style="grid-template-columns:repeat(3,1fr);margin-bottom:24px">
       <div class="stat-card">
         <div class="stat-num">18,6M</div>
         <div class="stat-label">Hecta rừng bị thiêu rụi</div>
@@ -1125,12 +1154,12 @@ section {
     </div>
   </div>
   <div class="right-panel" style="width:42%">
-    <img src="images/12-chayrung-hau-qua.jpeg" alt="Kangaroo chạy khỏi đám cháy Úc" style="border-radius:24px;width:100%;height:100%;object-fit:cover">
+    <img src="images/chay2.jpg" alt="Kangaroo chạy khỏi đám cháy Úc" style="border-radius:24px;width:100%;height:100%;object-fit:cover">
   </div>
 </section>
 
 <!-- ══════════════════════════ SLIDE 14: NHIỆT ĐỘ — NGUYÊN NHÂN ══════════════════════════ -->
-<section data-screen-label="14 Nhiệt độ Trái Đất — Nguyên nhân" class="split-slide green-split">
+<section data-screen-label="15 Nhiệt độ Trái Đất — Nguyên nhân" class="split-slide green-split">
   <nav class="navbar green-nav">
     <span class="brand">Mối quan hệ giữa nguyên nhân và kết quả được vận dụng trong thực tiễn như thế nào?</span>
     <div class="nav-links">
@@ -1140,9 +1169,9 @@ section {
     </div>
   </nav>
   <div class="left-panel" style="width:58%">
-    <div class="badge green">Ví dụ 3 — Khí hậu</div>
-    <h2 style="font-size:52px">Nhiệt độ Trái Đất<br><em>Tăng cao</em><br><span style="color:var(--text-mid);font-size:40px;font-weight:700">Nguyên nhân</span></h2>
-    <div class="cause-pair" style="margin-top:16px">
+    <div class="badge green">Ví dụ 3</div>
+    <h2 style="font-size:52px; margin-bottom: 18px;">Vì sao nhiệt độ Trái Đất<br><em>Tăng cao</em><br><span style="color:var(--text-mid);font-size:40px;font-weight:700">Nguyên nhân</span></h2>
+    <div class="cause-pair" style="margin-top:24px">
       <div class="cause-box-new obj">
         <div class="cb-label">Khách quan</div>
         <ul>
@@ -1161,19 +1190,20 @@ section {
     </div>
   </div>
   <div class="right-panel" style="width:44%">
-    <img src="images/13-nhietdo-nguyen-nhan.jpeg" alt="Ô nhiễm khí thải" style="border-radius:24px;width:100%;height:100%;object-fit:cover">
+    <img src="images/cao.webp" alt="Ô nhiễm khí thải" style="border-radius:24px;width:100%;height:100%;object-fit:cover">
   </div>
 </section>
 
 <!-- ══════════════════════════ SLIDE 15: NHIỆT ĐỘ — HẬU QUẢ ══════════════════════════ -->
-<section data-screen-label="15 Nhiệt độ Trái Đất — Hậu quả" class="dark-split">
-  <div class="dark-left">
-    <div class="eyebrow">Ví dụ 3 — Hậu quả</div>
+<section data-screen-label="16 Nhiệt độ Trái Đất — Hậu quả" class="dark-split" style="background-image: url('images/polar-bear.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+  <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.05) 100%); pointer-events: none;"></div>
+  <div class="dark-left" style="background: linear-gradient(135deg, rgba(20,60,90,0.65) 0%, rgba(20,60,90,0.50) 100%); position: absolute; inset: 0; z-index: 2; width: 42%; padding: 100px 70px; display: flex; flex-direction: column; justify-content: center;">
+    <div class="eyebrow">Hậu quả</div>
     <h2>Hậu quả Biến đổi Khí hậu</h2>
     <p class="body-sm">Bằng cách thay đổi các <em>nguyên nhân chủ quan</em> hôm nay, chúng ta hoàn toàn có thể định hướng một tương lai tốt hơn.</p>
     <div class="pill-btn">Hành động ngay →</div>
   </div>
-  <div class="dark-right">
+  <div class="dark-right" style="background: rgba(255,255,255,0.80)">
     <div class="cards-grid">
       <div class="info-card" style="border-color:rgba(239,68,68,0.2);background:#fff5f5">
         <div class="card-num" style="background:#991b1b">!</div>
@@ -1200,7 +1230,7 @@ section {
 </section>
 
 <!-- ══════════════════════════ SLIDE 16: DIVIDER BIỂN ══════════════════════════ -->
-<section data-screen-label="16 Phần III — Tài nguyên Biển" class="divider-slide ocean-div">
+<section data-screen-label="17 Phần III — Tài nguyên Biển" class="divider-slide ocean-div">
   <div class="bg" style="background-image:url('images/15-bien-divider.jpeg')"></div>
   <div class="div-content">
     <div class="div-eyebrow">Phần III — Ứng dụng thực tiễn</div>
@@ -1211,7 +1241,7 @@ section {
 </section>
 
 <!-- ══════════════════════════ SLIDE 17: VAI TRÒ BIỂN ══════════════════════════ -->
-<section data-screen-label="17 Vai trò & Thực trạng biển" class="dark-split ocean-dark">
+<section data-screen-label="18 Vai trò & Thực trạng biển" class="dark-split ocean-dark">
   <div class="dark-left" style="background:linear-gradient(135deg, rgba(10,42,74,0.92) 0%, rgba(10,42,74,0.78) 100%), url('images/ban-do.jpg') center/cover no-repeat; background-blend-mode:multiply;">
     <div class="eyebrow">Tài nguyên Biển</div>
     <h2>Vai trò của Biển</h2>
@@ -1244,7 +1274,7 @@ section {
 </section>
 
 <!-- ══════════════════════════ SLIDE 18: FORMOSA — NGUYÊN NHÂN ══════════════════════════ -->
-<section data-screen-label="18 Formosa — Nguyên nhân" class="split-slide ocean-split">
+<section data-screen-label="19 Formosa — Nguyên nhân" class="split-slide ocean-split">
   <nav class="navbar ocean-nav">
     <span class="brand">Mối quan hệ giữa nguyên nhân và kết quả được vận dụng trong thực tiễn như thế nào?</span>
     <div class="nav-links">
@@ -1254,9 +1284,9 @@ section {
     </div>
   </nav>
   <div class="left-panel" style="width:58%">
-    <div class="badge ocean">Ví dụ — Biển</div>
-    <h2 style="font-size:52px">Sự cố Formosa<br><em>Hà Tĩnh 2016</em><br><span style="color:var(--text-mid);font-size:40px;font-weight:700">Nguyên nhân</span></h2>
-    <div class="cause-pair" style="margin-top:16px">
+    <div class="badge ocean">Ví dụ 4</div>
+    <h2 style="font-size:52px; margin-bottom: 18px;">Vì sao có thảm họa Formosa<br><em>Hà Tĩnh 2016</em><br><span style="color:var(--text-mid);font-size:40px;font-weight:700">Nguyên nhân</span></h2>
+    <div class="cause-pair" style="margin-top:24px">
       <div class="cause-box-new obj">
         <div class="cb-label">Khách quan (điều kiện)</div>
         <ul>
@@ -1275,12 +1305,12 @@ section {
     </div>
   </div>
   <div class="right-panel" style="width:44%">
-    <img src="images/17-formosa-nguyen-nhan.jpeg" alt="Nhà máy gây ô nhiễm" style="border-radius:24px;width:100%;height:100%;object-fit:cover">
+    <img src="images/ca1.jpg" alt="Nhà máy gây ô nhiễm" style="border-radius:24px;width:100%;height:100%;object-fit:cover">
   </div>
 </section>
 
 <!-- ══════════════════════════ SLIDE 19: FORMOSA — HẬU QUẢ ══════════════════════════ -->
-<section data-screen-label="19 Formosa — Hậu quả & Giải pháp" class="split-slide ocean-split">
+<section data-screen-label="20 Formosa — Hậu quả & Giải pháp" class="split-slide ocean-split">
   <nav class="navbar ocean-nav">
     <span class="brand">Mối quan hệ giữa nguyên nhân và kết quả được vận dụng trong thực tiễn như thế nào?</span>
     <div class="nav-links">
@@ -1290,9 +1320,9 @@ section {
     </div>
   </nav>
   <div class="left-panel" style="width:60%">
-    <div class="badge ocean">Ví dụ — Hậu quả & Giải pháp</div>
+    <div class="badge ocean">Hậu quả</div>
     <h2 style="font-size:52px;margin-bottom:20px">Thảm họa<br><em>Formosa 2016</em></h2>
-    <div class="stats-row" style="grid-template-columns:repeat(3,1fr);margin-bottom:20px">
+    <div class="stats-row" style="grid-template-columns:repeat(3,1fr);margin-bottom:24px">
       <div class="stat-card ocean">
         <div class="stat-num" style="color:var(--ocean-dark)">500K+</div>
         <div class="stat-label">Người dân mất sinh kế trực tiếp</div>
@@ -1311,13 +1341,33 @@ section {
     </div>
   </div>
   <div class="right-panel" style="width:42%">
-    <img src="images/18-formosa-hau-qua.jpeg" alt="Cá chết hàng loạt vụ Formosa" style="border-radius:24px;width:100%;height:100%;object-fit:cover">
+    <iframe id="formosa-video" width="100%" height="100%" src="https://www.youtube.com/embed/6PDlA83jlMo?start=33&end=168&fs=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius:24px;"></iframe>
+    <script>
+      // Set playback speed to 2x when video is ready
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('formosa-video', {
+          events: {
+            'onReady': onPlayerReady
+          }
+        });
+      }
+      
+      function onPlayerReady(event) {
+        event.target.setPlaybackRate(2);
+      }
+    </script>
   </div>
 </section>
 
 <!-- ══════════════════════════ SLIDE 20: KẾT LUẬN ══════════════════════════ -->
 <section data-screen-label="20 Kết luận" class="final-slide">
-  <div class="bg" style="background-image:url('images/19-ket-luan.jpg')"></div>
+  <div class="bg" style="background-image:url('images/save.webp')"></div>
   <nav class="navbar dark-nav">
     <span class="brand">Mối quan hệ giữa nguyên nhân và kết quả được vận dụng trong thực tiễn như thế nào?</span>
     <div class="nav-links">
